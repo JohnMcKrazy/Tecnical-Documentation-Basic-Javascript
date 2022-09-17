@@ -1,0 +1,152 @@
+.tkn_var {
+    color: #78e645;
+}
+.tkn_let {
+    color: #28d863;
+}
+.tkn_name {
+    color: #ff6347;
+}
+.tkn_const {
+    color: #0b8a35;
+}
+.tkn_operator {
+    color: #c89f19;
+}
+.tkn_func_var {
+    color: #a494ff;
+}
+.tkn_statement {
+    color: yellow;
+}
+.tkn_function {
+    color: #00ffc8;
+}
+.tkn_func {
+    color: #5ad7fd;
+}
+.tkn_boolean {
+    color: #abf8a4;
+}
+.tkn_regex,
+.tkn_extra {
+    color: #f544c9;
+}
+.tkn_end {
+    color: #87ceeb;
+}
+.tkn_index {
+    color: #00ffc8;
+}
+.tkn_number {
+    color: #f08d49;
+}
+.tkn_key_string {
+    color: #d3770d;
+}
+.tkn_key {
+    color: #a75e0b;
+}
+.tkn_null {
+    color: orange;
+}
+.tkn_case {
+    color: #cc99cd;
+}
+.tkn_alert {
+    color: yellow;
+}
+.tkn_important {
+    color: rgb(224, 10, 10);
+}
+.tkn_deleted {
+    color: white;
+}
+.tkn_comment {
+    color: #999;
+}
+.tkn_tag {
+    color: #e2777a;
+}
+.tkn_property {
+    color: #f8c555;
+}
+.tkn_selector {
+    color: #cc99cd;
+}
+.tkn_string {
+    color: #29ff7b;
+}
+.tkn_url {
+    color: #67cdcc;
+}
+.tkn_bold,
+.tkn_important {
+    font-weight: 700;
+}
+.tkn_italic {
+    font-style: italic;
+}
+.tkn_entity {
+    cursor: help;
+}
+.code_tab {
+    display: block;
+    padding: 0.2rem 2rem;
+}
+.data_block {
+    position: relative;
+    width: fit-content;
+    background: var(--contentBg);
+    list-style-type: disc;
+    padding: 3rem 2rem 2rem 4rem;
+    border-radius: 0.5rem;
+    font-size: var(--codeSize);
+    margin: 1.5rem 0 1.5rem;
+}
+.data_block[class*="language-"]:before {
+    position: absolute;
+    z-index: 3;
+    top: 0.5rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    color: hsla(0, 0%, 15%, 0.4);
+}
+.data_block[class~="language-phone"]:before {
+    content: "#";
+}
+.code_block {
+    display: block;
+    position: relative;
+    width: 100%;
+    padding: 3rem 2rem 2rem;
+    margin: 2rem 0;
+    border-radius: 0.5rem;
+    font-family: var(--codeFont);
+    font-size: var(--codeSize);
+    background: var(--bgCode);
+    color: var(--colorCode);
+}
+.code_block h5 {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    font-size: var(--codeSize);
+}
+.code_block[class*="language-"]:before {
+    position: absolute;
+    z-index: 3;
+    top: 0.5rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    color: hsla(0, 0%, 100%, 0.4);
+}
+.code_block[class~="language-js"]:before {
+    content: "js";
+}
+.code_block[class~="language-html"]:before {
+    content: "html";
+}
+.code_block[class~="language-css"]:before {
+    content: "css";
+}

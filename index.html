@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf=8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--! GOOGLE FONTS EMPIEZA -->
+        <!-- ¬TITILIUM  -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet" />
+        <!-- ¬PLAYFAIR DISPLAY   -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+        <!-- ¬TECHNO  -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+        <!--! TERMINA GOOGLE FONTS  -->
+        <link rel="stylesheet" href="./codesStyles.css" />
+        <link rel="stylesheet" href="./styles.css" />
+
+        <title>Tecnical Documentation</title>
+    </head>
+    <body class="">
+        <nav id="navbar">
+            <header>
+                <h1 id="title-nav-header">Basic HTML Structure</h1>
+            </header>
+            <ul id="nav-links-list">
+                <li><a href="#Introduction" class="nav-link">Introduction</a></li>
+                <li><a href="#What_you_should_already_know" class="nav-link">What you should already know</a></li>
+                <li><a href="#JavaScript_and_Java" class="nav-link">JavaScript and Java</a></li>
+                <li><a href="#Hello_world" class="nav-link">Hello world</a></li>
+                <li><a href="#Variables" class="nav-link">Variables</a></li>
+                <li><a href="#Declaring_variables" class="nav-link">Declaring variables</a></li>
+                <li><a href="#Variable_scope" class="nav-link">Variable scope</a></li>
+                <li><a href="#Global_variables" class="nav-link">Global variables</a></li>
+                <li><a href="#Constants" class="nav-link">Constants</a></li>
+                <li><a href="#Data_types" class="nav-link">Data types</a></li>
+                <li><a href="#if...else_statement" class="nav-link">if...else statement</a></li>
+                <li><a href="#while_statement" class="nav-link">while statement</a></li>
+                <li><a href="#Function_declarations" class="nav-link">Function declarations</a></li>
+                <li><a href="#References" class="nav-link">References</a></li>
+            </ul>
+        </nav>
+        <main id="main-doc">
+            <section id="Introduction" class="main-section">
+                <header>
+                    <h1 class="title-section">Introduction</h1>
+                </header>
+                <p>
+                    JavaScript is a cross-platform, object-oriented scripting language. It is a small and lightweight language. Inside a host environment (for example, a web browser), JavaScript can be connected to the objects of its environment to provide programmatic control over them.
+                    <br />
+                    <br />
+                    JavaScript contains a standard library of objects, such as Array, Date, and Math, and a core set of language elements such as operators, control structures, and statements. Core JavaScript can be extended for a variety of purposes by supplementing it with additional objects; for
+                    example:
+                </p>
+                <ul class="list">
+                    <li>
+                        Client-side JavaScript extends the core language by supplying objects to control a browser and its Document Object Model (DOM). For example, client-side extensions allow an application to place elements on an HTML form and respond to user events such as mouse clicks, form
+                        input, and page navigation.
+                    </li>
+                    <li>
+                        Server-side JavaScript extends the core language by supplying objects relevant to running JavaScript on a server. For example, server-side extensions allow an application to communicate with a database, provide continuity of information from one invocation to another of the
+                        application, or perform file manipulations on a server.
+                    </li>
+                </ul>
+            </section>
+
+            <section id="What_you_should_already_know" class="main-section">
+                <header>
+                    <h1 class="title-section">What you should already know</h1>
+                </header>
+                <p>This guide assumes you have the following basic background:</p>
+                <ul class="list">
+                    <li>A general understanding of the Internet and the World Wide Web (WWW).</li>
+                    <li>Good working knowledge of HyperText Markup Language (HTML).</li>
+                    <li>Some programming experience. If you are new to programming, try one of the tutorials linked on the main page about JavaScript.</li>
+                </ul>
+            </section>
+
+            <section id="JavaScript_and_Java" class="main-section">
+                <header>
+                    <h1 class="title-section">JavaScript and Java</h1>
+                </header>
+                <p>
+                    JavaScript and Java are similar in some ways but fundamentally different in some others. The JavaScript language resembles Java but does not have Java's static typing and strong type checking. JavaScript follows most Java expression syntax, naming conventions and basic
+                    control-flow constructs which was the reason why it was renamed from LiveScript to JavaScript.
+                    <br />
+                    <br />
+                    In contrast to Java's compile-time system of classes built by declarations, JavaScript supports a runtime system based on a small number of data types representing numeric, Boolean, and string values. JavaScript has a prototype-based object model instead of the more common
+                    class-based object model. The prototype-based model provides dynamic inheritance; that is, what is inherited can vary for individual objects. JavaScript also supports functions without any special declarative requirements. Functions can be properties of objects, executing as
+                    loosely typed methods.
+                    <br />
+                    <br />
+                    JavaScript is a very free-form language compared to Java. You do not have to declare all variables, classes, and methods. You do not have to be concerned with whether methods are public, private, or protected, and you do not have to implement interfaces. Variables, parameters,
+                    and function return types are not explicitly typed.
+                </p>
+            </section>
+
+            <section id="Hello_world" class="main-section">
+                <header>
+                    <h1 class="title-section">Hello world</h1>
+                </header>
+                <p>To get started with writing JavaScript, open the Scratchpad and write your first "Hello world" JavaScript code:</p>
+                <code class="code_block language-js">
+                    <span class="tkn_function">function</span> <span class="tkn_func">greetMe</span>(<span class="tkn_func_var">yourName</span>){
+                    <span class="code_tab">
+                        <span class="tkn_alert">alert</span>(<span class="tkn_string">"Hello "</span>
+                        <h5 class="tkn_operator">+</h5>
+                        <span class="tkn_func_var">yourName</span>);
+                    </span>
+                    }<br />
+                    <span class="tkn_func">greetMe</span>(<span class="tkn_string">"World"</span>);
+                </code>
+            </section>
+
+            <section id="Variables" class="main-section">
+                <header>
+                    <h1 class="title-section">Variables</h1>
+                </header>
+                <p>
+                    You use variables as symbolic names for values in your application. The names of variables, called identifiers, conform to certain rules.
+                    <br />
+                    <br />
+                    A JavaScript identifier must start with a letter, underscore (_), or dollar sign ($); subsequent characters can also be digits (0-9). Because JavaScript is case sensitive, letters include the characters "A" through "Z" (uppercase) and the characters "a" through "z" (lowercase).
+                    <br />
+                    <br />
+                    You can use ISO 8859-1 or Unicode letters such as å and ü in identifiers. You can also use the Unicode escape sequences as characters in identifiers. Some examples of legal names are Number_hits, temp99, and _name.
+                </p>
+            </section>
+
+            <section id="Declaring_variables" class="main-section">
+                <header>
+                    <h1 class="title-section">Declaring variables</h1>
+                </header>
+                <p>You can declare a variable in three ways:</p>
+                <br />
+                <p>With the keyword var. For example:</p>
+                <code class="code_block language-js">
+                    <span class="tkn_var">var</span>
+                    <span class="tkn_name">x</span>
+                    <h5 class="tkn_operator">=</h5>
+                    <span class="tkn_number">42</span>
+                </code>
+                <p>This syntax can be used to declare both local and global variables.</p>
+                <br />
+                <p>By simply assigning it a value. For example:</p>
+                <code class="code_block language-js">
+                    <span class="tkn_name">x</span>
+                    <h5 class="tkn_operator">=</h5>
+                    <span class="tkn_number">42</span>
+                </code>
+                <p>This always declares a global variable. It generates a strict JavaScript warning. You shouldn't use this variant.</p>
+                <br />
+                <p>With the keyword let. For example:</p>
+                <code class="code_block language-js">
+                    <span class="tkn_let">let</span>
+                    <span class="tkn_name">y</span>
+                    <h5 class="tkn_operator">=</h5>
+                    <span class="tkn_number">13</span>
+                </code>
+                <p>This syntax can be used to declare a block scope local variable. See Variable scope below.</p>
+            </section>
+
+            <section id="Variable_scope" class="main-section">
+                <header>
+                    <h1 class="title-section">Variable scope</h1>
+                </header>
+                <p>
+                    When you declare a variable outside of any function, it is called a global variable, because it is available to any other code in the current document. When you declare a variable within a function, it is called a local variable, because it is available only within that function.
+                    <br />
+                    <br />
+                    JavaScript before ECMAScript 2015 does not have block statement scope; rather, a variable declared within a block is local to the function (or global scope) that the block resides within. For example the following code will log 5, because the scope of x is the function (or global
+                    context) within which x is declared, not the block, which in this case is an if statement.
+                </p>
+                <code class="code_block language-js">
+                    <span class="tkn_statement">if</span>(<span class="tkn_boolean">true</span>) {
+                    <span class="code_tab">
+                        <span class="tkn_var">var</span> <span class="tkn_name">x</span>
+                        <h5 class="tkn_operator">=</h5>
+                        <span class="tkn_number">5</span>;
+                    </span>
+                    };
+                    <br /><span class="tkn_let">console</span>.<span class="tkn_func">log</span>(<span class="tkn_name">x</span>); <span class="tkn_comment">// 5</span>
+                </code>
+                <p>This behavior changes, when using the let declaration introduced in ECMAScript 2015.</p>
+                <code class="code_block language-js">
+                    <span class="tkn_statement">if</span>(<span class="tkn_boolean">true</span>) {
+                    <span class="code_tab">
+                        <span class="tkn_let">let</span> <span class="tkn_name">x</span>
+                        <h5 class="tkn_operator">=</h5>
+                        <span class="tkn_number">5</span>;
+                    </span>
+                    };
+                    <br /><span class="tkn_let">console</span>.<span class="tkn_func">log</span>(<span class="tkn_name">y</span>); <span class="tkn_comment">// ReferenceError: y is not defined</span>
+                </code>
+            </section>
+
+            <section id="Global_variables" class="main-section">
+                <header>
+                    <h1 class="title-section">Global variables</h1>
+                </header>
+                <p>
+                    Global variables are in fact properties of the global object. In web pages the global object is window, so you can set and access global variables using the window.variable syntax.
+                    <br />
+                    <br />
+                    Consequently, you can access global variables declared in one window or frame from another window or frame by specifying the window or frame name. For example, if a variable called phoneNumber is declared in a document, you can refer to this variable from an iframe as
+                    parent.phoneNumber.
+                </p>
+            </section>
+
+            <section id="Constants" class="main-section">
+                <header>
+                    <h1 class="title-section">Constants</h1>
+                </header>
+                <p>You can create a read-only, named constant with the const keyword. The syntax of a constant identifier is the same as for a variable identifier: it must start with a letter, underscore or dollar sign and can contain alphabetic, numeric, or underscore characters</p>
+                <code class="code_block language-js">
+                    <span class="tkn_const">const</span> <span class="tkn_name">PI</span>
+                    <h5 class="tkn_operator">=</h5>
+                    <span class="tkn_number">3.14</span>;
+                </code>
+                <p>
+                    A constant cannot change value through assignment or be re-declared while the script is running. It has to be initialized to a value.
+                    <br />
+                    <br />
+                    The scope rules for constants are the same as those for let block scope variables. If the const keyword is omitted, the identifier is assumed to represent a variable.
+                    <br />
+                    <br />
+                    You cannot declare a constant with the same name as a function or variable in the same scope. For example:
+                </p>
+                <code class="code_block language-js">
+                    // THIS WILL CAUSE AN ERROR function<br />
+                    <span class="tkn_func">f</span>() {};<br />
+                    <span class="tkn_const">const</span> <span class="tkn_name">f</span>
+                    <h5 class="tkn_operator">=</h5>
+                    <span class="tkn_number">5</span>;
+                    <br />
+                    <br />
+                    // THIS WILL CAUSE AN ERROR ALSO<br />
+                    <span class="tkn_function">function</span> <span class="tkn_func">f</span>() {
+                    <span class="code_tab">
+                        <span class="tkn_const">const</span> <span class="tkn_name">g</span>
+                        <h5 class="tkn_operator">=</h5>
+                        <span class="tkn_number">5</span>;<br />
+                        <span class="tkn_var">var</span> <span class="tkn_name">g</span>; <span class="tkn_comment">//statements</span>
+                    </span>
+                    };
+                </code>
+                <p>However, object attributes are not protected, so the following statement is executed without problems.</p>
+                <code class="code_block language-js">
+                    <span class="tkn_const">const</span> <span class="tkn_name">MY_OBJECT</span>
+                    <h5 class="tkn_operator">=</h5>
+                    { <span class="tkn_key_string">"key"</span> : <span class="tkn_string">"value"</span> };<br />
+                    <span class="tkn_name">MY_OBJECT</span>
+                    <h5 class="tkn_operator">=</h5>
+                    <span class="tkn_string">"otherValue"</span>;
+                </code>
+            </section>
+
+            <section id="Data_types" class="main-section">
+                <header>
+                    <h1 class="title-section">Data types</h1>
+                </header>
+                <p>The latest ECMAScript standard defines seven data types:</p>
+                <ul class="list">
+                    <li>Six data types that are primitives:</li>
+                    <ul>
+                        <li>Boolean. true and false</li>
+                        <li>null. A special keyword denoting a null value. Because JavaScript is case-sensitive, null is not the same as Null, NULL, or any other variant.</li>
+                        <li>undefined. A top-level property whose value is undefined.</li>
+                        <li>Number. 42 or 3.14159.</li>
+                        <li>String. "Howdy"</li>
+                        <li>Symbol (new in ECMAScript 2015). A data type whose instances are unique and immutable.</li>
+                    </ul>
+                    <li>and Object</li>
+                </ul>
+                <p>
+                    Although these data types are a relatively small amount, they enable you to perform useful functions with your applications. Objects and functions are the other fundamental elements in the language. You can think of objects as named containers for values, and functions as
+                    procedures that your application can perform.
+                </p>
+            </section>
+
+            <section id="if...else_statement" class="main-section">
+                <header>
+                    <h1 class="title-section">if...else statement</h1>
+                </header>
+                <p>Use the if statement to execute a statement if a logical condition is true. Use the optional else clause to execute a statement if the condition is false. An if statement looks as follows:</p>
+                <code class="code_block language-js">
+                    <span class="tkn_statement">if</span>(<span class="tkn_comment">condition</span>) {
+                    <span class="code_tab"> <span class="tkn_comment">statement_1</span>; </span>
+                    } <span class="tkn_statement">else</span> {
+                    <span class="code_tab"> <span class="tkn_comment">statement_2</span>; </span>
+                    };
+                </code>
+                <p>
+                    condition can be any expression that evaluates to true or false. See Boolean for an explanation of what evaluates to true and false. If condition evaluates to true, statement_1 is executed; otherwise, statement_2 is executed. statement_1 and statement_2 can be any statement,
+                    including further nested if statements.
+                    <br />
+                    <br />
+                    You may also compound the statements using else if to have multiple conditions tested in sequence, as follows:
+                </p>
+                <code class="code_block language-js">
+                    <span class="tkn_statement">if</span>(<span class="tkn_comment">condition_1</span>) {
+                    <span class="code_tab"> <span class="tkn_comment">statement_1</span>; </span>
+                    } <span class="tkn_statement">else if</span>(<span class="tkn_comment">condition_2</span>) {
+                    <span class="code_tab"> <span class="tkn_comment">statement_2</span>; </span>
+                    } <span class="tkn_statement">else if</span>(<span class="tkn_comment">condition_n</span>) {
+                    <span class="code_tab"> <span class="tkn_comment">statement_n</span>; </span>
+                    } <span class="tkn_statement">else</span> {
+                    <span class="code_tab"> <span class="tkn_comment">statement_last</span>; </span>
+                    };
+                </code>
+                <p>
+                    In the case of multiple conditions only the first logical condition which evaluates to true will be executed. To execute multiple statements, group them within a block statement ({ ... }) . In general, it's good practice to always use block statements, especially when nesting if
+                    statements:
+                </p>
+                <code class="code_block language-js">
+                    <span class="tkn_statement">if</span>(<span class="tkn_comment">condition</span>) {
+                    <span class="code_tab">
+                        <span class="tkn_comment">statement_1_runs_if_condition_is_true</span>;<br />
+                        <span class="tkn_comment">statement_2_runs_if_condition_is_true</span>;
+                    </span>
+                    } <span class="tkn_statement">else</span> {
+                    <span class="code_tab">
+                        <span class="tkn_comment">statement_3_runs_if_condition_is_false</span>;<br />
+                        <span class="tkn_comment">statement_4_runs_if_condition_is_false</span>;
+                    </span>
+                    };
+                </code>
+                <p>It is advisable to not use simple assignments in a conditional expression, because the assignment can be confused with equality when glancing over the code. For example, do not use the following code:</p>
+                <code class="code_block language-js">
+                    <span class="tkn_statement">if</span>(<span class="tkn_name">x</span>
+                    <h5 class="tkn_operator">=</h5>
+                    <span class="tkn_name">y</span>){
+                    <span class="code_tab tkn_comment"> /* statements here */ </span>
+                    };
+                </code>
+                <p>If you need to use an assignment in a conditional expression, a common practice is to put additional parentheses around the assignment. For example:</p>
+                <code class="code_block language-js">
+                    <span class="tkn_statement">if</span>((<span class="tkn_name">x</span>
+                    <h5 class="tkn_operator">=</h5>
+                    <span class="tkn_name">y</span>)){
+                    <span class="code_tab tkn_comment"> /* statements here */ </span>
+                    };
+                </code>
+            </section>
+
+            <section id="while_statement" class="main-section">
+                <header>
+                    <h1 class="title-section">while statement</h1>
+                </header>
+                <p>A while statement executes its statements as long as a specified condition evaluates to true. A while statement looks as follows:</p>
+                <code class="code_block language-js"> <span class="tkn_statement">while</span> (<span class="tkn_comment">condition</span>) <span class="tkn_comment">statement</span>; </code>
+                <p>
+                    If the condition becomes false, statement within the loop stops executing and control passes to the statement following the loop. The condition test occurs before statement in the loop is executed. If the condition returns true, statement is executed and the condition is tested
+                    again. If the condition returns false, execution stops and control is passed to the statement following while. To execute multiple statements, use a block statement ({ ... }) to group those statements.
+                </p>
+                <p>
+                    Example:
+                    <br />
+                    <br />
+                    The following while loop iterates as long as n is less than three:
+                </p>
+                <code class="code_block language-js">
+                    <span class="tkn_var">var</span> <span class="tkn_name">n</span>
+                    <h5 class="tkn_operator">=</h5>
+                    <span class="tkn_number">0</span>;
+                    <br />
+                    <span class="tkn_var">var</span> <span class="tkn_name">x</span>
+                    <h5 class="tkn_operator">=</h5>
+                    <span class="tkn_number">0</span>;
+                    <br />
+                    <br />
+                    <span class="tkn_statement">while</span> (<span class="tkn_name">n</span>
+                    <h5 class="tkn_operator"><</h5>
+                    <span class="tkn_number">3</span>){
+                    <span class="code_tab">
+                        <span class="tkn_name">n</span>
+                        <h5 class="tkn_operator">++</h5>
+                        ;
+                        <br />
+                        <span class="tkn_name">x</span>
+                        <h5 class="tkn_operator">+=</h5>
+                        <span class="tkn_name">n</span>;
+                    </span>
+                    };
+                </code>
+                <p>With each iteration, the loop increments n and adds that value to x. Therefore, x and n take on the following values:</p>
+                <ul class="list">
+                    <li>After the first pass: n = 1 and x = 1</li>
+                    <li>After the second pass: n = 2 and x = 3</li>
+                    <li>After the third pass: n = 3 and x = 6</li>
+                </ul>
+                <p>After completing the third pass, the condition n < 3 is no longer true, so the loop terminates.</p>
+            </section>
+
+            <section id="Function_declarations" class="main-section">
+                <header>
+                    <h1 class="title-section">Function declarations</h1>
+                </header>
+                <p>A function definition (also called a function declaration, or function statement) consists of the function keyword, followed by:</p>
+                <ul>
+                    <li>The name of the function.</li>
+                    <li>A list of arguments to the function, enclosed in parentheses and separated by commas.</li>
+                    <li>The JavaScript statements that define the function, enclosed in curly brackets, { }.</li>
+                </ul>
+                <p>For example, the following code defines a simple function named square:</p>
+                <code class="code_block language-js">
+                    <span class="tkn_function">function</span> <span class="tkn_func">square</span>(<span class="tkn_name">number</span>) {
+                    <span class="code_tab">
+                        <span class="tkn_end">return</span>
+                        <span class="tkn_name">number</span>
+                        <span class="tkn_operator">*</span>
+                        <span class="tkn_name">number</span>;
+                    </span>
+                    };
+                </code>
+                <p>The function square takes one argument, called number. The function consists of one statement that says to return the argument of the function (that is, number) multiplied by itself. The return statement specifies the value returned by the function.</p>
+                <code class="code_block language-js">
+                    <span class="tkn_end">return</span>
+                    <span class="tkn_name">number</span>
+                    <span class="tkn_operator">*</span>
+                    <span class="tkn_name">number</span>;
+                </code>
+                <p>Primitive parameters (such as a number) are passed to functions by value; the value is passed to the function, but if the function changes the value of the parameter, this change is not reflected globally or in the calling function.</p>
+            </section>
+
+            <section id="References" class="main-section">
+                <header>
+                    <h1 class="title-section">References</h1>
+                </header>
+                <ul class="links-list">
+                    <li class="link-item-list">All the documentation in this page is taken from <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide" target="_blank">MDN</a></li>
+                </ul>
+            </section>
+        </main>
+        <button class="btn-extra" id="btn-theme">
+            <div class="icon_container" id="icon_theme_container"></div>
+        </button>
+        <a href="#" class="btn-extra" id="btn-up">
+            <div class="icon_container">
+                <svg id="arrow-up" class="arrow-up_icon icon_extra_btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path class="clr-1" d="M12 10.828l-4.95 4.95-1.414-1.414L12 8l6.364 6.364-1.414 1.414z" /></svg>
+            </div>
+        </a>
+    </body>
+    <script>
+        const BODY = document.querySelector("body");
+        const lightT = "light_theme";
+        const darkT = "dark_theme";
+        const btnTheme = document.querySelector("#btn-theme");
+        const btnThemeIconContainer = document.querySelector("#icon_theme_container");
+        const sun = `<svg class="sun_icon icon_extra_btn" id="sun_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path class="clr-1" d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"/></svg>`;
+        const moon = `<svg class="moon_icon icon_extra_btn" id="moon_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path class="clr-1" d="M11.38 2.019a7.5 7.5 0 1 0 10.6 10.6C21.662 17.854 17.316 22 12.001 22 6.477 22 2 17.523 2 12c0-5.315 4.146-9.661 9.38-9.981z"/></svg>`;
+        let currentTheme = "";
+        let currentIcon = "";
+        const checkTime = (tm) => {
+            //*console.log(time);
+            if (!tm) {
+                const date = new Date();
+                const time = date.getHours();
+                const isNight = time < 8 || time > 17;
+                switch (isNight) {
+                    case true:
+                        currentTheme = darkT;
+                        currentIcon = sun;
+                        break;
+                    case false:
+                        currentTheme = lightT;
+                        currentIcon = moon;
+                        break;
+                    default:
+                        console.log("tienes un problema con tu funcion checkTime");
+                        return;
+                }
+
+                console.log(`Theme active by time: ${currentTheme}`);
+            } else {
+                switch (tm) {
+                    case lightT:
+                        currentTheme = darkT;
+                        currentIcon = sun;
+                        break;
+
+                    case darkT:
+                        currentTheme = lightT;
+                        currentIcon = moon;
+                        break;
+                }
+
+                console.log(`Theme active by click: ${currentTheme}`);
+            }
+            BODY.className = currentTheme;
+            btnThemeIconContainer.innerHTML = currentIcon;
+        };
+        checkTime();
+
+        btnTheme.addEventListener("click", () => checkTime(currentTheme));
+    </script>
+</html>
